@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Feedback.css">
+    <link rel="icon" href="logo2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Feedback</title>
+</head>
+<body>
+    <header>
+        <img src="white1.png" alt="Logo" width="150"> 
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Shop</a>
+            <a href="#">User Profile</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Team</a>
+            <a  class="navlink" id="active">Feedback</a>
+        </nav>
+    </header>
+    <div id="main">
+        <div id="feedback">
+            <h1>Feedback Form</h1>
+            <br>
+            <form id="feedbackform" action="mailto:shenonkavinda214@gmail.com" method="post">
+
+                <label for="fname">Enter your first name:</label>
+                <input type="text" id="fname" name="fname">
+                <div class="error" id="errorname">*Name required</div>
+                <br>
+
+                <label for="lname">Enter your last name:</label>
+                <input type="text" id="lname" name="lname">
+                <div class="error" id="errorlname">*Name required</div>
+                <br>
+
+                <label for="contactno">Enter your Contact No.</label>
+                <input type="text" id="contactno" name="contactno">
+                <div class="error" id="errorcontactno">*Contact number required</div>
+                <br>
+
+                <label for="email">Enter your email:</label>
+                <input type="text" id="email" name="email">
+                <div class="error" id="erroremail">*Email required</div>
+                <br>
+
+                <div>Was this website easy to navigate through?</div>
+                <input type="radio" id="yesNav" name="navigate" value="yes">
+                <label for="yesNav">Yes</label>
+                <input type="radio" id="noNav" name="navigate" value="no">
+                <label for="noNav">No</label>
+                <div class="error" id="errornav">*Please select an option</div>
+                <br>
+
+                <div>How satisfied are you with Our services?</div>
+                    <label for="1">1</label>
+                    <input type="radio" id="1" name="rate" value="1">
+                    <label for="2">2</label>
+                    <input type="radio" id="2" name="rate" value="2">
+                    <label for="3">3</label>
+                    <input type="radio" id="3" name="rate" value="3">
+                    <label for="4">4</label>
+                    <input type="radio" id="4" name="rate" value="4">
+                    <label for="5">5</label>
+                    <input type="radio" id="5" name="rate" value="5">
+                <div class="error" id="errorrate">*Please select an option</div>
+                <br>
+
+                <label for="notification">Would you like to receive updates about the website and any offers?</label><br>
+                <select name="notification" id="notification">
+                    <option value="yes">Yes(via email)</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+
+                <label for="comment">Do you have any comments or requests?</label>
+                <br>
+                <textarea id="comment" name="comment" rows="4"></textarea>
+                <br><br>
+
+                <button type="button" id="preview" onclick="showPreview(form)">Preview</button>
+                <button type="button" id="submitbtn" onclick="finalSubmit(form)">Submit</button>
+
+                <div id="errordisplay">
+                    *Please make sure above required fields are filled with correct format!
+                </div>
+
+            </form>
+        </div>
+
+        <div id="previewsection" style="display: none;">
+            <h2>Preview</h2>
+
+            <p><strong>Name:</strong> <span id="showName"></span></p>
+
+            <p><strong>Name:</strong> <span id="showlname"></span></p>
+
+            <p><strong>contactno:</strong> <span id="showContactno"></span></p>
+
+            <p><strong>Email:</strong> <span id="showEmail"></span></p>
+
+            <p><strong>Easy Navigation:</strong> <span id="showEasy"></span></p>
+
+            <p><strong>Rating:</strong> <span id="showRate"></span></p>
+
+            <p><strong>Recieve Notifications:</strong> <span id="showNotifications"></span></p>
+
+            <p id="question"><strong>Comments:</strong> <span id="showComment"></span></p>
+            <div id="buttons">
+                <button type="button" id="edit" onclick="showFeedback()">Edit</button>
+                <button type="button" id="confirm" form="feedbackform" onclick="finalConfirm(form)">Confirm</button>
+            </div>
+        </div>
+
+        <div id="message" style="display: none;">
+            <h2>Thank you for your feedback!</h2>
+        </div>
+    </div>
+    <footer>
+        <ul class="social_icon">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="PageEditor.html">Page Editor</a></li>
+        </ul>
+        <p>@2024 Web Design Coursework | All Rights Reserved</p>
+    </footer>
+
+    <script src="Feedback.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
